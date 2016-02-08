@@ -1,32 +1,32 @@
-  //################# LIBRARIES ################
-  #include <SPI.h>
-  #include <WiFi.h>
+//################# LIBRARIES ################
+#include <SPI.h>
+#include <WiFi.h>
  
-  char ssid[] = "yourNetwork"; //  your network SSID (name) 
-  char pass[] = "secretPassword";    // your network password (use for WPA, or use as key for WEP)
+char ssid[] = "yourNetwork"; //  your network SSID (name) 
+char pass[] = "secretPassword";    // your network password (use for WPA, or use as key for WEP)
   
-  // Cloud data
-  #define SERVER         "test.ttcloud.net"     // replace with your server
-  #define PORT           8082                 // replace with your port
+// Cloud data
+#define SERVER         "test.ttcloud.net"     // replace with your server
+#define PORT           8082                 // replace with your port
     
-  //################ FIWARE VARIABLES ################
-  char FIWARE_APIKEY[] = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
-  char FIWARE_DEVICE[] = "myArduino";
-  char FIWARE_SERVER[] = "test.ttcloud.net";
-  int FIWARE_PORT = 8082;
+//################ FIWARE VARIABLES ################
+char FIWARE_APIKEY[] = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+char FIWARE_DEVICE[] = "myArduino";
+char FIWARE_SERVER[] = "test.ttcloud.net";
+int FIWARE_PORT = 8082;
   
-  //################ SENSOR VARIABLES ################  
-  const int numsensors = 2;
-  String measures[numsensors][2];
-  // Wait 2s between measures
-  int MEASURES_PERIOD = 2000;
+//################ SENSOR VARIABLES ################  
+const int numsensors = 2;
+String measures[numsensors][2];
+// Wait 2s between measures
+int MEASURES_PERIOD = 2000;
   
-   // initialize the library instance
-   WiFiClient client;
-  int status = WL_IDLE_STATUS;
+// initialize the library instance
+WiFiClient client;
+int status = WL_IDLE_STATUS;
  
-  void setup() 
-  {  
+void setup() 
+{  
     // Put your setup code here, to run once:
     // initialize serial communications at 9600 bps:
     Serial.begin(9600);
@@ -53,23 +53,23 @@
     delay(10000);
   } 
   Serial.println("Connected to wifi");
-  }
+}
   
   
-  void loop() 
-  {
+void loop() 
+{
     // read the analog in value and map it to the range of the analog out:
     readSensors();
     postMeasures();
     
     delay(MEASURES_PERIOD);
-  }
+}
    
  
 
   
-  void readSensors()
-  {
+void readSensors()
+{
     
     //Connect Sensor on Analogic PIN A0
     int sensor1 = analogRead(0);
@@ -80,11 +80,11 @@
     int sensor2 = analogRead(1);
     measures[1][0] = "s2";
     measures[1][1] = String(sensor2);
-  }
+}
   
   
-  void postMeasures()
-  {
+void postMeasures()
+{
     Serial.println("\nStarting connection to server...");
     
     String body;
@@ -159,10 +159,10 @@
     gsmClient.stop();
     
     }
-  }
+}
   
-  // Not execute old commands again
-  void sendAck(){
+// Not execute old commands again
+void sendAck(){
     String ack_payload= "";
     ack_payload= String(FIWARE_DEVICE)+"@ledr|OK";
     client.println("POST /iot/d?i="+String(FIWARE_DEVICE)+"&k="+String(FIWARE_APIKEY)+" HTTP/1.1");    
@@ -171,5 +171,5 @@
     client.println("Connection: close");
     client.println();
     client.println(ack_payload);    
-  }
+}
 
