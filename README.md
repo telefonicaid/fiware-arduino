@@ -8,8 +8,6 @@ Then, it will show you how to access these data using FIWARE NGSI standard APIs 
 ### First steps on your Arduino
 If you are new with Arduino, we recommend you going first to [Arduino website](https://www.arduino.cc). 
 
-Please, go to [this section](/arduino) to get some useful resources.
-
 ### What is FIWARE IoT Stack?
 [FIWARE](https://www.fiware.org/) is an open initiative aiming to create a sustainable ecosystem to grasp the opportunities that will emerge with the new wave of digitalization caused by the integration of recent Internet technologies. Based on this FIWARE technologies, and focused on IoT area, Telefonica created and [IoT Platform](http://iot.tid.es) to help Industrial Partners and Smart Cities building its IoT services. 
 
@@ -28,9 +26,9 @@ You will receive an email with your API and portal credentials to send data from
 Please, in case you have any trouble signing up let us know at [iot_support@tid.es](mailto:iot_support@tid.es)
 
 ### Step #2: Upload .ino sketch to Arduino
-Once you have your API credentials, get this [.ino sample sketch](/arduino) and setting up your API key.
+Once you have your FIWARE IoT Stack API credentials, select one of these [.ino sample sketch](/arduino) depending on the connectivity used (WiFi or GSM) and set up your API key.
 
-Upload the sketch to your Arduino and it will send A0 and A1 PIN values to FIWARE IoT Stack.
+Upload the selected sketch to your Arduino and it will send A0 and A1 PIN values to FIWARE IoT Stack.
 
 Ideally, connect there some sensors (temperature, luminosity) to have real data there.
 
