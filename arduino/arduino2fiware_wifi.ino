@@ -22,8 +22,9 @@
   int MEASURES_PERIOD = 2000;
   
    // initialize the library instance
-  WiFiClient client;
-  
+   WiFiClient client;
+  int status = WL_IDLE_STATUS;
+ 
   void setup() 
   {  
     // Put your setup code here, to run once:
