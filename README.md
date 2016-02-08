@@ -21,9 +21,9 @@ You have your Arduino collecting data from sensors. So what?
 Next step is connecting your applications with FIWARE IoT Stack to access your data and show your magic to the rest of the world.
 
 ### Step #1: Sign up to get your credentials
-You can get your FIWARE IoT Stack credentials at [http://openbank.ttcloud.net/](http://signup.ttcloud.net).
+You can get your FIWARE IoT Stack credentials at [http://signup.ttcloud.net/](http://signup.ttcloud.net).
 
-You will receive an email with your API and portal credentials to send data from your Edison and use FIWARE IoT Stack APIs on your App.
+You will receive an email with your API and portal credentials to send data from your Arduino and use FIWARE IoT Stack APIs on your App.
 
 Please, in case you have any trouble signing up let us know at [iot_support@tid.es](mailto:iot_support@tid.es)
 
