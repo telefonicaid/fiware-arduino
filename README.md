@@ -6,14 +6,14 @@ This repository holds examples about how to persist your Arduino data into FIWAR
 Then, it will show you how to access these data using FIWARE NGSI standard APIs and its multiple connectors with external tools as Freeboard or CartoDB.
 
 ### First steps on your Arduino
-If you are new with Thinking Things Open, we recommend you going first to [Arduino website](https://www.arduino.cc). 
+If you are new with Arduino, we recommend you going first to [Arduino website](https://www.arduino.cc). 
 
 Please, go to [this section](/arduino) to get some useful resources.
 
 ### What is FIWARE IoT Stack?
 [FIWARE](https://www.fiware.org/) is an open initiative aiming to create a sustainable ecosystem to grasp the opportunities that will emerge with the new wave of digitalization caused by the integration of recent Internet technologies. Based on this FIWARE technologies, and focused on IoT area, Telefonica created and [IoT Platform](http://iot.tid.es) to help Industrial Partners and Smart Cities building its IoT services. 
 
-This FIWARE IoT Stack is also available for independent developers and startups, and will be used in this tutorial to persist your Thinking Things Open data in the cloud. You can go to its [ReadTheDocs](http://fiware-iot-stack.readthedocs.org/en/latest/index.html) to get familiar with it. 
+This FIWARE IoT Stack is also available for independent developers and startups, and will be used in this tutorial to persist your Arduino data in the cloud. You can go to its [ReadTheDocs](http://fiware-iot-stack.readthedocs.org/en/latest/index.html) to get familiar with it. 
 
 ## Using FIWARE IoT Stack
 You have your Arduino collecting data from sensors. So what?
@@ -27,15 +27,15 @@ You will receive an email with your API and portal credentials to send data from
 
 Please, in case you have any trouble signing up let us know at [iot_support@tid.es](mailto:iot_support@tid.es)
 
-### Step #2: Upload .ino sketch to Thinking Things Open
+### Step #2: Upload .ino sketch to Arduino
 Once you have your API credentials, get this [.ino sample sketch](/arduino) and setting up your API key.
 
-Upload the sketch to your Thinking Things Open and it will send A0 and A1 PIN values to FIWARE IoT Stack.
+Upload the sketch to your Arduino and it will send A0 and A1 PIN values to FIWARE IoT Stack.
 
 Ideally, connect there some sensors (temperature, luminosity) to have real data there.
 
 ### Step #3: FIWARE IoT Stack Management Portal
-To check your data is correctly sent and stored, first thing is accessing the [Management Portal](http://ttcloud.net:8808/test). You can log-in using your given FIWARE user/password. In the "Entities" section (An Entity is a data object representation in FIWARE, so your Thiking Things is represented as an Entity) you will find an Entity called "thing:myArduino" with a list of attributes:
+To check your data is correctly sent and stored, first thing is accessing the [Management Portal](http://ttcloud.net:8808/test). You can log-in using your given FIWARE user/password. In the "Entities" section (An Entity is a data object representation in FIWARE, so your Arduino is represented as an Entity) you will find an Entity called "thing:myArduino" with a list of attributes:
 * "S0": Your A0 pin value
 * "S1": Your A1 pin value
 
