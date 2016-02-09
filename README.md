@@ -33,7 +33,7 @@ Upload the selected sketch to your Arduino and it will send A0 and A1 PIN values
 Ideally, connect there some sensors (temperature, luminosity) to have real data there.
 
 ### Step #3: FIWARE IoT Stack Management Portal
-To check your data is correctly sent and stored, first thing is accessing the [Management Portal](http://ttcloud.net:8808/test). You can log-in using your given FIWARE user/password. In the "Entities" section (An Entity is a data object representation in FIWARE, so your Arduino is represented as an Entity) you will find an Entity called "thing:myArduino" with a list of attributes:
+To check your data is correctly sent and stored, first thing is accessing the FIWARE IoT Stack Management Portal. You can log-in using your given FIWARE IoT Stack user/password. In the "Entities" section (An Entity is a data object representation in FIWARE, so your Arduino is represented as an Entity) you will find an Entity called "thing:myArduino" with a list of attributes:
 * "S0": Your A0 pin value
 * "S1": Your A1 pin value
 
