@@ -156,7 +156,7 @@ void postMeasures()
         }
     }
     
-    gsmClient.stop();
+    client.stop();
     
     }
 }
